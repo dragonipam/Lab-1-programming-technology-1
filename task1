@@ -1,0 +1,12 @@
+using System;
+namespace Z_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите значение n копеек.");
+            int penny = int.Parse(Console.ReadLine());
+        }
+    }
+}
