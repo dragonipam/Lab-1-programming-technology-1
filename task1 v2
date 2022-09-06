@@ -1,0 +1,35 @@
+using System;
+namespace Z_1
+{
+
+    public class Logic
+    {
+        public static string Сalculation(int ruble)
+        {
+            string outMessage = "";
+            int penny = ruble % 100;
+            ruble /= 100;
+            if (penny == 0)
+            {
+                outMessage = ruble + " руб.";
+            }
+            else
+            {
+                outMessage = ruble + " руб. " + penny + " коп.";
+            }
+            return outMessage;
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите значение n копеек.");
+            int penny = int.Parse(Console.ReadLine());
+            var outMessage = Logic.Сalculation(penny);
+            Console.WriteLine(outMessage);
+        }
+    }
+}
